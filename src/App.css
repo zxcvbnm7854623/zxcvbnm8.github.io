@@ -1,0 +1,48 @@
+/* 使游戏内容居中显示 */
+.game {
+  display: flex;
+  flex-direction: row; /* 改为水平排列，使游戏板和游戏信息并排显示 */
+  justify-content: center; /* 居中 */
+  align-items: flex-start; /* 将内容对齐到顶部 */
+  gap: 20px; /* 在游戏板和游戏信息之间添加间隙 */
+}
+
+/* 游戏板的网格布局 */
+.board {
+  display: grid;
+  grid-template-columns: repeat(15, 50px); /* 调整列宽为50px */
+  grid-gap: 5px; /* 增加格子之间的间隙 */
+}
+
+/* 单个格子的样式 */
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;  /* 增大格子的宽度 */
+  height: 50px; /* 增大格子的高度 */
+  font-size: 24px; /* 增大字体 */
+  cursor: pointer; /* 鼠标悬停时显示为指针 */
+}
+
+/* 游戏状态文本的样式 */
+.status {
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* 调整游戏信息部分的布局 */
+.game-info {
+  display: flex;
+  flex-direction: column; /* 垂直排列按钮 */
+  align-items: flex-start;
+}
+
+/* 调整“Go to game start”按钮的样式 */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 5px;
+  cursor: pointer;
+}
